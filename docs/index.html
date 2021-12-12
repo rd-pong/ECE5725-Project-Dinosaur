@@ -11,10 +11,10 @@
   <title>Baby Dino Adventure</title> <!-- Bootstrap core CSS -->
 
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="starter-template.css" rel="stylesheet">
+  <link href="starter-template.css" refl="stylesheet">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css">
-  <script src="https://cdn.jsdelivr.net/gh/rd-pong/live2d-widget@0.8.4/autoload.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/gh/rd-pong/live2d-widget@0.8.4/autoload.js"></script> -->
 
 
 </head>
@@ -131,8 +131,11 @@
         ourselves.</p>
       <p style="text-align: center;"><img style="width: 30%;" src="media/image1.png" /> <img style="width: 30%;"
           src="media/image2.png" /> </p>
-      <p>The most time we spend on this program is the jump function. To let the dinosaur, jump twice, we tried a whole
-        day to solve the problem. At first, we should achieve the single jump pf the dinosaur. Simply we added a
+
+
+      <h4>Jump and Double Jump</h4>
+      <p>We spent a large portion on developing double jump. At first, we should achieve the single jump pf the
+        dinosaur. Simply we added a
         variable to record the magnitude and direction of velocity. Why we use this method? Because in the real world,
         due to the acceleration of gravity, our speed in the process of rising and falling is not uniform, but there is
         a process of acceleration change. Our variable is equivalent to simulating acceleration. This variable decreases
@@ -178,8 +181,8 @@
           src="media/image8.png" /> </p>
       <h3 id="control-scheme">Control Scheme</h3>
       <p>So far, we have introduced three basic movements of the dinosaur, which are jump, duck, and fire. The original
-        Chrome dinosaur game uses keyboard as control input, and we would like to make the control scheme more
-        interactive.</p>
+        Chrome dinosaur game uses keyboard as control input, and we would like to make the game more
+        interactive by introducing more modes of control.</p>
       <h4 id="hand-tracking">Hand tracking</h4>
       <p>Initially, we thought hand tracking would be a straightforward solution because people were comfortable with
         using their fingers to interact with smart phones. In this implementation, we used a package called Media Pipe,
@@ -191,9 +194,9 @@
           src="media/hand-control.gif" /> </p>
 
       <p> The model worked extremely well on our personal computer and is able to detect all the key points on the hand.
-      </p>
-      <p>However, when we ran the program on RPi4 with 1GB memory, it had at least one second lag between frames which
-        made it too slow to control our game which could not stand such response delay.</p>
+        However, when we ran the program on RPi4 with 1GB memory, it had at least one second lag between frames which
+        made it too slow to control our game. After all, the dino game is still a action game which could not stand such
+        response delay.</p>
       <h4 id="opencv-and-color-tracking">OpenCV and Color Tracking</h4>
       <p>The delay is likely caused by the computational power require by Media Pipe. Therefore, we moved forward using
         a more RPi-friendly implementation which only used OpenCV. The overall idea is to first filter the input video
@@ -214,12 +217,34 @@
         maximum enclosing circle of that region and its center. To avoid mis recognition, we set a threshold for the
         minimum radius of the circle. Once the detected radius is larger than the threshold, show the circle with the
         center in the <i>Color Calibration</i> window. </p>
+
+      <h4>Testing</h4>
+      <p>
+        The majority of testing the control scheme could be done visually due to the nature of our application. We could
+        simply show intermediary OpenCV filters, masks, and frames using <code>imshow()</code>. Most of the testing was
+        done on the desktop for the sake of convenience.
+      </p>
+      <p>
+        We have packed drawing functionalities, such as draw threshold lines and corresponding text
+        (<code>drawThresholdAndText</code>), draw
+        tails of object center (<code>drawTailOnFrame</code>), into functions. Those functions could be tested alone.
+      </p>
     </div>
 
     <hr id='result'>
-    <div style="text-align:center;">
-      <h2>Result</h2>
-      <p style="text-align: left;padding: 0px 30px;">paragraph </p>
+    <div id="text">
+      <h2>Result and Conclusion</h2>
+      <p>
+        
+      </p>
+
+      <p>
+        The project went basically according to plan except that we replaced the original gesture control mode with
+        object control mode. We were successful in implementing the game as well as several control schemes we had
+        planned. Although we were unable to show on the piTFT in object control mode, the system works fine on a regular
+        monitor. Overall, we had fun designing and coding during the project. We also hope you could have playing our
+        game.
+      </p>
     </div>
     <hr>
     <div class="center-block"> <iframe width="640" height="360" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
