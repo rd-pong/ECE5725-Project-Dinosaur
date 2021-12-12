@@ -1,5 +1,6 @@
+/* template */
 body {
-    padding-top: 50px;
+  padding-top: 50px;
 }
 
 .starter-template {
@@ -7,11 +8,20 @@ body {
   text-align: center;
 }
 
-hr { margin: 20px 0 20px 0; }
+hr {
+  margin: 20px 0 20px 0;
+}
 
-.center-block {  
-    width:640px;
-  display: block;  
-  margin-right: auto;  
-  margin-left: auto;  
-}  
+.center-block {
+  width: 640px;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/*  */
+.text {
+  text-align: left;
+  padding: 0px 30px;
+  font-size:18px;
+}

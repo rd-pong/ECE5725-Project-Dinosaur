@@ -8,49 +8,46 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
+  <title>Baby Dino Adventure</title> <!-- Bootstrap core CSS -->
 
-  <title>Starter Template for Bootstrap</title>
-
-  <!-- Bootstrap core CSS -->
   <link href="dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-  <!-- <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet"> -->
-
-  <!-- Custom styles for this template -->
   <link href="starter-template.css" rel="stylesheet">
 
-  <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-  <!-- <script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
 
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+
+
 </head>
 
 <body>
-
   <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-          aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Project name</a>
-      </div>
+      <div class="navbar-header"> <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+          data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle
+            navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span
+            class="icon-bar"></span> </button> <a class="navbar-brand" href="#">Baby Dino Adventure</a> </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
+
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#intro">Introduction</a></li>
-          <li><a href="#obj">Project Objective</a></li>
-          <li><a href="#design">Design</a></li>
+          <li><a href="#obj">Objectives</a></li>
+          <li>
+
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+              aria-expanded="false">Design & Testing <span class="caret"></span></a>
+
+            <ul class="dropdown-menu">
+              <li><a href="#pygame">Pygame</a></li>
+              <li><a href="#control-scheme">Control Scheme</a></li>
+              <!-- <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li> -->
+            </ul>
+
+
+          </li>
           <li><a href="#drawings">Drawings</a></li>
           <li><a href="#testing">Testing</a></li>
           <li><a href="#result">Result</a></li>
@@ -59,134 +56,197 @@
       <!--/.nav-collapse -->
     </div>
   </nav>
-
   <div class="container">
-
     <div class="starter-template">
-      <h1>Object Controlled Dinosaur Game</h1>
-      <p class="lead">Really Awesome<br>Haowen JIANG | Ruidi PENG</p>
+      <h1>Baby Dino Adventure</h1>
+      <p class="lead" style="text-align:center;">Control the Dino Game with Buttons and Colorful Objects<br><br>Haowen
+        JIANG | Ruidi PENG</p>
     </div>
-
     <hr id="intro">
-
-    <div style="text-align:center;">
+    <div class="text">
       <h2>Introduction</h2>
-      <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim
-        posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec
-        est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum
-        pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla
-        lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec
-        ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim
-        feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.
-      </p>
+      <p> Most of you have probably played the Chrome dinosaur game when having a bad Internet connection. The game is
+        about controlling a small dinosaur to dodge obstacles by jumping or ducking. It is a very simple but interesting
+        game. Inspired by the Chrome dinosaur game, we implemented our version of the game with extended functionalities
+        and control schemes to make the game more interactive and fun. The game can be played in two modes: object
+        control and button control. In object control mode, users could use an object of color to control the movement
+        of the dinosaur. In button control mode, users could simply control the dinosaur by pressing buttons on the
+        piTFT. </p>
     </div>
-
     <hr id='obj'>
-
     <div class="row">
-      <div class="col-md-4" style="text-align:center;">
-        <img class="img-rounded" src="pics/1.jpg" alt="Generic placeholder image" width="240" height="240">
-      </div>
+      <div class="col-md-4" style="text-align:center;"> <img class="img-rounded" src="media/game-start.jpg"
+          alt="Generic placeholder image" width="320" height="268"
+          style=" border: 1px solid gray; border-radius: 18px; padding: 5px;"> </div>
       <div class="col-md-8" style="font-size:18px;">
         <h2>Project Objective:</h2>
         <ul>
-          <li>some important objectives.some important objectives.some important objectives.some important objectives.
-          </li>
-          <li>some other important objectives.</li>
-          <li>some not-that-important objectives.</li>
+          <li>Implement the dino game with extended functionalities using PyGame.</li>
+          <li>Develop a control scheme using object tracking.</li>
+          <li>Develop a control scheme using buttons.</li>
+          <li><strike>Develop a control scheme using gesture recognition.</strike></li>
         </ul>
       </div>
     </div>
-
     <hr id='design'>
-
-    <div style="text-align:center;">
-      <h2>Design</h2>
-      <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim
-        posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec
-        est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum
-        pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla
-        lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec
-        ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim
-        feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.
+    <div class="text">
+      <h2>Design and Testing</h2>
+      <h3 id="pygame">PyGame</h3>
+      <p>Initially, what we wanted to do is to only make a duplication of the dinosaur game. We searched for the
+        resources and successfully get some implementation of the dinosaur game. But after testing out some of the code
+        online, it turned out that not many of them were well implemented. After consideration, we decided to write a
+        game from scratch by ourselves. We've used pygame a few times during the lab sessions, so we decided to use
+        pygame to implement the game. Of course, we also added a lot of interesting features to the game. </p>
+      <p>We are going to add a health point system (HP) to the game, each time you hit an obstacle would result in HP
+        deduction. Of course, users can also collect hearts in the game to restore health points. We also added various
+        types of treasures such as gold and diamonds, by picking up them you can increase your points.
+        Moreover, whenever the little dinosaur gets a certain number of points, it can increase the number of times it
+        spews fire. Finally, for fun and playability of the game, we added a two-step jump function to the dinosaur.
+        This allows it to jump twice as high in the air, which greatly increases the upper limit of operation.</p>
+      <p>Inspired by the cheat codes in the 80's, we have also added a cheat mode to the game, which will not deduct the
+        health point but the score will be fixed after opening. As for the trigger conditions are certainly more hidden.
       </p>
-    </div>
+      <h4>Dinosaur and Obstacles</h4>
+      <p>The first step is to find the icon of different actions of the dinosaur and load them into the program. From a
+        website that has the resources of the game, we picked some of the pictures. Moreover, to make the game more
+        interesting, we get some funny icons like the health icon and the golden and diamonds icon. Then we used
+        Photoshop to draw different kinds of obstacles by changing the numbers of the cactus. Rivers are also draw by
+        ourselves.</p>
+      <p>To modify and debug the code more efficiently, we used object-oriented programing to design the game. Then it
+        comes to the core of the program: how to let the dinosaur run? Actually, we let the background icon and the
+        obstacles move from the right to the left. But how to randomly generate the obstacles so that the game will not
+        be boring?</p>
+      <p>We have tried a lot of methods like refreshing the game window or create a method to detect whether the
+        obstacles are vanished on the left. But the redundant code made the game run slowly and caused some faults.</p>
+      <p>Inspired by a video on YouTube, it comes up to our mind that the data structure “queue” can definitely solve
+        this problem in an easy way. Firstly, we created the class called dinosaur, obstacle and treasure. Then we give
+        different properties to the class like the axis of the icon, the type of the obstacles and treasures. Finally,
+        the “queue” is used to save the status of the obstacles. For example, when the obstacle is on the left side of
+        the game window, it pops out of the queue and when the program detect that the queue is empty, it will randomly
+        add a new obstacle into the queue. To achieve the random generation, we used the “random” function and give
+        different weight to different obstacles. Like the cactus, we can give a high weight because it is easy to be
+        crossed. However, the bomb and the river should have a low weight because they are hard obstacles. As it is
+        shown in figure 1, there are different kinds of obstacles and there are all very interesting and draw by
+        ourselves.</p>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/image1.png" /> <img style="width: 30%;"
+          src="media/image2.png" /> </p>
+      <p>The most time we spend on this program is the jump function. To let the dinosaur, jump twice, we tried a whole
+        day to solve the problem. At first, we should achieve the single jump pf the dinosaur. Simply we added a
+        variable to record the magnitude and direction of velocity. Why we use this method? Because in the real world,
+        due to the acceleration of gravity, our speed in the process of rising and falling is not uniform, but there is
+        a process of acceleration change. Our variable is equivalent to simulating acceleration. This variable decreases
+        over time, but it can also be negative, which means that the little dinosaur is falling. This can make the small
+        dinosaur move more smoothly and in line with the laws of physics. Moreover, the little dinosaur can duck down to
+        avoid the birds flying in the air.</p>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/image3.png" /> <img style="width: 30%;"
+          src="media/image4.png" /> </p>
+      <p>To add the function of double jump, we divide the status of the dinosaur into three parts: on the ground, in
+        the air but first jump, in the air but double jump. For example, we it is on the ground or touch the ground, two
+        jump variables will be set to false. When it is in the air but first jump, after we pressing the double jump
+        button again, the acceleration variable described above will be reset to its initial value, allowing the
+        dinosaur to continue bouncing. This method also works for three-step and four-step jumps. It is a great progress
+        of the program and we get strong confidence from the success.</p>
+      <p>Then it comes to the health system and treasure system. We get the inspiration from the ECE 5725 lab so it is
+        easy to display the health icon on top of the game window. When there is a collision between the dinosaur and
+        the obstacle, the obstacle will pop out of the queue and the health count will be deducted. With the previous
+        experience, it is easy to do these works. Similarly, the treasure system can be duplicated from the obstacle
+        system. The only difference is that it will not deduct health and will increase the game points. For example,
+        the golden can increase 100 points and the diamond can increase 400 points so the diamond must be rare. If the
+        player is lucky enough, he can get the health treasure and increase the count of health.</p>
+      <p>Moreover, since it is a dinosaur, then fire-breathing is a necessary skill. When we press the fire button, the
+        dinosaur will generate fire and destroy all the obstacles in front of it. Thanks to the oop, we achieve it
+        easily because what we need to do is just to change the direction and the speed of the fire icon. When it has a
+        collision with the obstacles, the obstacle will also pop out of the queue.</p>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/image5.png" /> </p>
+      <p>So, the most important part of this game is the application of data structure “queue”.</p>
+      <p>Finally, we add a cheat mode into the game. With this mode, the dinosaur’s health will not be deducted. It can
+        help little children enjoy the game. However, the point will be fixed in the cheat mode. Actually, it is an
+        interesting part of this game so the way to trigger it may also be a little more difficult. When it is turned
+        on, the text cheat mode will be shown below the points.</p>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/image6.png" /> </p>
+      <p>The rest are some fragmented and detailed settings. Regarding the initial number of flames at the beginning of
+        the game, we set it to 5, which should be a more balanced number. There are also many bonus mechanisms. For
+        example, the number of flames will be increased by one every time you get 1000points. When the health points is
+        3, the health points will be increased by 500points. Gold coins can provide 100points, and diamonds can provide
+        400points. The speed of the obstacles in the game will keep getting faster as the points go up, so the game will
+        get harder and harder.</p>
+      <p>The last thing is to design the start screen and the game failure screen. Again, since we have trained 5725's
+        lab many times, it only took us two or three hours to finish the start and end screens. It is simple but live.
+        The crying dinosaur is also drawing by ourselves.</p>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/image7.png" /> <img style="width: 30%;"
+          src="media/image8.png" /> </p>
+      <h3 id="control-scheme">Control Scheme</h3>
+      <p>So far, we have introduced three basic movements of the dinosaur, which are jump, duck, and fire. The original
+        Chrome dinosaur game uses keyboard as control input, and we would like to make the control scheme more
+        interactive.</p>
+      <h4 id="hand-tracking">Hand tracking</h4>
+      <p>Initially, we thought hand tracking would be a straightforward solution because people were comfortable with
+        using their fingers to interact with smart phones. In this implementation, we used a package called Media Pipe,
+        which is an industry level framework for building multimodal, cross-platform applied ML pipelines. As you can
+        see in the below picture, there is a red dot at the position of the middle fingertip. Once the middle tip falls
+        in the region of the three movements, the dinosaur moves accordingly.</p>
 
-    <hr id='drawings'>
+      <p style="text-align: center;"><img style="width: 30%;" src="media/hand-control2.gif" /> <img style="width: 30%;"
+          src="media/hand-control.gif" /> </p>
 
-    <div style="text-align:center;">
-      <h2>Drawings</h2>
-      <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim
-        posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec
-        est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum
-        pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla
-        lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec
-        ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim
-        feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.
+      <p> The model worked extremely well on our personal computer and is able to detect all the key points on the hand.
       </p>
-    </div>
-
-    <hr id='testing'>
-
-    <div style="text-align:center;">
-      <h2>Testing</h2>
-      <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim
-        posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec
-        est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum
-        pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla
-        lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec
-        ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim
-        feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.
+      <p>However, when we ran the program on RPi4 with 1GB memory, it had at least one second lag between frames which
+        made it too slow to control our game which could not stand such response delay.</p>
+      <h4 id="opencv-and-color-tracking">OpenCV and Color Tracking</h4>
+      <p>The delay is likely caused by the computational power require by Media Pipe. Therefore, we moved forward using
+        a more RPi-friendly implementation which only used OpenCV. The overall idea is to first filter the input video
+        frames with a color range filter, then track the center of the maximum contour.</p>
+      <p> To start with, users can put the object of color in front of the camera, and select the color accordingly. The
+        program would record the color selected by the user and generate a HSV color range. </p> <img
+        src="media/color-cali.gif" alt="Color calibration"
+        style=" display: block; margin-left: auto; margin-right: auto; width: 30%;">
+      <p> The image would be smoothed using Gaussian filter and then converted to HSV color model for range selection.
+        <code>inRange()</code> was used to generate a filter (<code>mask</code>) keeping only the pixels with in the
+        selected color range. Dilations and erosions were performed to the filter to remove any small blobs. After
+        filtering, we got a <code>maskedFrame</code> which only contained pixels with color in the desired range. The
+        resulting <code>maskedFrame</code> is also displayed in the <i>Color Calibration</i> window.
       </p>
+      <p> <code>maskedFrame</code> was only used for visualization and intend to give users a better understanding of
+        what the program read in. We found contours in the resulting filter (<code>mask</code>) instead. If there was at
+        least one contours, precede with the one with maximum area. <code>minEnclosingCircle</code> was used to find the
+        maximum enclosing circle of that region and its center. To avoid mis recognition, we set a threshold for the
+        minimum radius of the circle. Once the detected radius is larger than the threshold, show the circle with the
+        center in the <i>Color Calibration</i> window. </p>
     </div>
 
     <hr id='result'>
-
     <div style="text-align:center;">
       <h2>Result</h2>
-      <p style="text-align: left;padding: 0px 30px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum
-        lorem nulla, consectetur at leo vel, pretium bibendum nisl. Cras blandit quam a enim ultrices, eu convallis enim
-        posuere. Donec eleifend enim sed purus consectetur, vitae cursus lectus varius. Vivamus consectetur felis nec
-        est venenatis posuere. Phasellus vitae aliquet erat. In laoreet lacinia mollis. Quisque iaculis nisl fermentum
-        pharetra lobortis. Donec rhoncus dui sem, ac molestie leo tristique vel. Phasellus in nibh feugiat, fringilla
-        lectus in, elementum magna. Etiam quis dui condimentum, tempus ex in, dapibus est. Cras ut congue augue. Donec
-        ac enim ex. Ut id tristique risus, vel porttitor quam. Sed ultricies enim eu nibh porttitor, vel sodales enim
-        feugiat. Fusce volutpat venenatis magna ac ultrices. Curabitur eget urna ut nulla mattis convallis non eu diam.
-      </p>
+      <p style="text-align: left;padding: 0px 30px;">paragraph </p>
     </div>
-
     <hr>
-    <div class="center-block">
-      <iframe width="640" height="360" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-        allowfullscreen></iframe>
+    <div class="center-block"> <iframe width="640" height="360" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        frameborder="0" allowfullscreen></iframe>
       <h4 style="text-align:center;">Demonstration Video</h4>
     </div>
     <hr>
-
     <div class="row" style="text-align:center;">
       <h2>Work Distribution</h2>
-      <div style="text-align:center;">
-        <img class="img-rounded" src="pics/group.jpg" alt="Generic placeholder image" style="width:80%;">
+      <div style="text-align:center;"> <img class="img-rounded" src="media/group.jpg" alt="Generic placeholder image"
+          style="width:40%;">
         <h4>Project group picture</h4>
       </div>
-      <div class="col-md-6" style="font-size:16px">
-        <img class="img-rounded" src="pics/a.png" alt="Generic placeholder image" width="240" height="240">
-        <h3>Ruidi PENG</h3>
-        <p class="lead">rp474[AT]cornell.edu</p>
-        <p>Designed the overall software architecture (Just being himself).
+      <div class="col-md-6" style="font-size:16px"> <img class="img-rounded" src="media/a.png"
+          alt="Generic placeholder image" width="240" height="240">
+        <h3>Ruidi PENG</h3> <A HREF="#"
+          onclick="d='cornell.edu'; u='rp474'; prompt('Copy my Email to clipboard, this is for anti-spam, thank you!',u+'@'+d); return false">Click
+          to send us email</A>
+        <p>Designed and tested the control schemes.
       </div>
-      <div class="col-md-6" style="font-size:16px">
-        <img class="img-rounded" src="pics/b.png" alt="Generic placeholder image" width="240" height="240">
-        <h3>Haowen JIANG</h3>
-        <p class="lead">hj323[AT]cornell.edu</p>
-        <p>Tested the overall system.
+      <div class="col-md-6" style="font-size:16px"> <img class="img-rounded" src="media/b.png"
+          alt="Generic placeholder image" width="240" height="240">
+        <h3>Haowen JIANG</h3> <A HREF="#"
+          onclick="d='cornell.edu'; u='hj323'; prompt('Copy my Email to clipboard, this is for anti-spam, thank you!',u+'@'+d); return false">Click
+          to send us email</A>
+        <p>Designed and tested the dino game in PyGame.
       </div>
     </div>
-
     <hr>
     <div style="font-size:18px">
       <h2>Parts List</h2>
@@ -199,39 +259,21 @@
     </div>
     <hr>
     <div style="font-size:18px">
-      <h2>References</h2>
-      <a href="https://picamera.readthedocs.io/">PiCamera Document</a><br>
-      <a href="http://www.micropik.com/PDF/SG90Servo.pdf">Tower Pro Servo Datasheet</a><br>
-      <a href="http://getbootstrap.com/">Bootstrap</a><br>
-      <a href="http://abyz.co.uk/rpi/pigpio/">Pigpio Library</a><br>
-      <a href="https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">R-Pi GPIO Document</a><br>
-
+      <h2>References</h2> <a href="https://picamera.readthedocs.io/">PiCamera Document</a><br> <a
+        href="https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/">R-Pi GPIO Document</a><br>
     </div>
-
     <hr>
-
     <div class="row">
       <h2>Code Appendix</h2>
-      <pre><code>
-// Hello World.c
-int main(){
-  printf("Hello World.\n");
-}
-              </code></pre>
+      Please refer to our <a href="https://github.com/rd-pong/ECE5725-Project-Dinosaur">Github Repository</a>.
+
     </div>
-
   </div><!-- /.container -->
-
-
-
-
-  <!-- Bootstrap core JavaScript
-    ================================================== -->
+  <!-- Bootstrap core JavaScript   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-  <script src="dist/js/bootstrap.min.js"></script>
-  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <script src="dist/js/bootstrap.min.js"></script> <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 </body>
 
