@@ -23,5 +23,22 @@ hr {
 .text {
   text-align: left;
   padding: 0px 30px;
-  font-size:18px;
+  font-size: 18px;
 }
+
+.title {
+  background-image: url("media/dino-game-chrome.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  /* width: auto;
+  height: auto; */
+  background-size: contain;
+  border: 2px dashed #333;
+  border-radius: 18px;
+}
+
+img{
+  border-radius: 10px;
+}
+
+
